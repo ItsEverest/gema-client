@@ -4,6 +4,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --animate-notification: notification 1s ease-in-out infinite;
+  
+  @keyframes notification0 {
+    0%, 100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
+  
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
