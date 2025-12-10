@@ -66,15 +66,13 @@ function App() {
     socket.on('notifyMessage', onNotify)
 
     return () => {
-      socket.off('errorMessage', onError)
-      socket.off('notifyMessage', onNotify)
+
     }
     
   }, [])
 
   useEffect(() => {
     if(errorQueue.length > 0 && error === null){
-      console.log("here")
       setError(errorQueue[0])
     }
   }, [errorQueue, error])
